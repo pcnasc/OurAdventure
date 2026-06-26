@@ -37,6 +37,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 12,
     activities_count: 8,
     days_count: 0,
+    notes: null,
   },
   {
     id: "t-cj",
@@ -57,6 +58,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 3,
     days_count: 1,
+    notes: null,
   },
   {
     id: "t-cab",
@@ -77,6 +79,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 0,
     days_count: 3,
+    notes: null,
   },
   {
     id: "t-bp",
@@ -97,6 +100,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 7,
     days_count: 3,
+    notes: null,
   },
   {
     id: "t-bc",
@@ -117,6 +121,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 1,
     days_count: 3,
+    notes: null,
   },
   {
     id: "t-ar",
@@ -137,6 +142,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 5,
     days_count: 15,
+    notes: null,
   },
   {
     id: "t-cl",
@@ -157,6 +163,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 0,
     days_count: 14,
+    notes: null,
   },
   {
     id: "t-fr",
@@ -177,6 +184,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 1,
     days_count: 10,
+    notes: null,
   },
   {
     id: "t-it",
@@ -197,6 +205,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 1,
     days_count: 7,
+    notes: null,
   },
   {
     id: "t-sd",
@@ -217,6 +226,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 0,
     days_count: 7,
+    notes: null,
   },
   {
     id: "t-ny",
@@ -237,6 +247,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 0,
     days_count: 10,
+    notes: null,
   },
   {
     id: "t-tr",
@@ -257,6 +268,7 @@ export const trips: TripWithStats[] = [
     checklist_progress: 0,
     activities_count: 1,
     days_count: 12,
+    notes: null,
   },
 ];
 
