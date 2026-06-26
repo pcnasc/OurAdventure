@@ -54,7 +54,8 @@ func main() {
 
 	log.Println("✈️  Go Flight Scraper Microservice started!")
 
-	// 3. Infinite loop for the background worker
+	// 3. Setup loop
+	isCronMode := os.Getenv("CRON_MODE") == "true"
 	for {
 		log.Println("🔍 Fetching active flight alerts...")
 
@@ -79,9 +80,14 @@ func main() {
 			processAlert(sb, serpApiKey, alert)
 		}
 
-		// Sleep before next cycle (e.g., 6 hours in production, using 5 minutes for demo)
-		log.Println("💤 Cycle complete. Sleeping for 5 minutes...")
-		time.Sleep(5 * time.Minute)
+		// Sleep or exit
+		if isCronMode {
+			log.Println("✅ Cron mode execution complete. Exiting.")
+			break
+		} else {
+			log.Println("💤 Cycle complete. Sleeping for 5 minutes...")
+			time.Sleep(5 * time.Minute)
+		}
 	}
 }
 

@@ -1,0 +1,29 @@
+name: Flight Scraper Cron
+
+on:
+  schedule:
+    # Roda a cada 6 horas (pode ajustar como quiser)
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Permite rodar manualmente clicando em um botão no GitHub
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+          
+      - name: Run Go Scraper
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          CRON_MODE: "true"
+        run: |
+          cd scraper
+          go run main.go
